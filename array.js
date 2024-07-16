@@ -86,3 +86,8 @@
 // console.log(Array.isArray(fruits));
 
 
+
+const fruits=['Banana','Apple','Mango',"John", "Doe", 46,"Saab", "Volvo", "BMW",1,2,3,4,5,6,7,8,10,'Cat','Cow','Crow'];
+
+let x=fruits.at(-5);
+console.log(x);
