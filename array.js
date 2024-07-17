@@ -86,8 +86,119 @@
 // console.log(Array.isArray(fruits));
 
 
+//The at Method to find the element to using there index number
+// const fruits=['Banana','Apple','Mango',"John", "Doe", 46,"Saab", "Volvo", "BMW",1,2,3,4,5,6,7,8,10,'Cat','Cow','Crow'];
 
-const fruits=['Banana','Apple','Mango',"John", "Doe", 46,"Saab", "Volvo", "BMW",1,2,3,4,5,6,7,8,10,'Cat','Cow','Crow'];
+// let x=fruits.at(-5);
+// console.log(x);
 
-let x=fruits.at(-5);
-console.log(x);
+
+// JavaScript Array join()
+
+// const txt1=["This","is","my","world"];
+// const txt2=[".And", "this", "is", "so" ,"beautiful"];
+// let add=txt1.join(" ") + txt2.join(" ");  //firstly join() method apply in the first array and convert it in string and then use + operator to adding to element. and then the join() method apply second array  to convert it in string;
+// console.log(typeof add);
+
+
+// const arr1=["Apple","Banana","Mango"];
+// let str=arr1.join(" ");
+// console.log(typeof str);
+
+// JavaScript Array join()
+
+
+//Array pop() and array push();
+
+// const fruits=['Banana','Apple','Mango'];
+// let fruit=fruits.pop();
+// console.log(fruits);
+// console.log(fruit);
+// let add=fruits.push(fruit);
+// console.log(add);
+// console.log(fruits);
+
+
+//Array shift() and array unshift();
+
+// const fruits=['Banana','Apple','Mango'];
+// let fruit=fruits.shift();
+// console.log(fruits);
+// console.log(fruit);
+// let add=fruits.unshift(fruit);
+// console.log(add);
+// console.log(fruits);
+
+
+
+
+// Array concat()
+
+
+
+// const x=['This is my world'];
+// const y=['This is so Beautiful'];
+
+// let z=x.concat(y);
+// console.log(z);
+
+
+
+
+//Array CopyWithin(target,start,end) method
+
+//target=5,
+//start=1,
+//end=2,
+
+//target=9,*target means that which position i keep my copying element 
+//start=1,*start means that which position i want start copy
+//end=4,*end means that which position i end my copying.
+
+//target=3
+//start=0
+//end=take defaults array.length
+
+//target= -5,
+//start= -6,
+//end=  -4
+
+        //    0         1        2        3       4       5
+// const fruits=[ 'Banana', 'Apple', 'Mango', "John", "Doe","Saab", "Volvo",
+//  "BMW",'Cat','Cow','Crow'];
+
+// const fruit=fruits.copyWithin(5,1,2);
+// const fruit1=fruits.copyWithin(9,1,10);
+// const fruit=fruits.copyWithin(-5,-6,-4);
+// console.log(fruit);
+// console.log(fruits);
+
+
+//Array flat() method
+
+// const arr=[['a','b'],['c','d'],['e']];
+// let arr1=arr.flat();
+// console.log(arr1);
+// console.log(arr);
+
+
+// Array splice()
+
+// const fruits=['Banana', 'Apple', 'Mango', "John", "Doe","Saab", "Volvo",
+// "BMW",'Cat','Cow','Crow'];
+
+// let arr=fruits.splice(3,2,'Lemon','Kiwi');
+// let x=arr.toString();
+// console.log(x);
+// let arr1=fruits.splice(3,0,x);
+// console.log(arr1);
+// console.log(fruits);
+
+//Array toSpliced()
+
+// const fruits=['Banana', 'Apple', 'Mango', "John", "Doe","Saab", "Volvo",
+// "BMW",'Cat','Cow','Crow'];
+
+// let fruit=fruits.toSpliced(0,1);
+// console.log(fruit);
+// console.log(fruits);
