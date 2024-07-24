@@ -59,11 +59,11 @@
 // }
 
 
-let x =10;
+// let x =10;
 
-if(Number){
+// if(Number){
     
 
-    console.log(Math.pow(x,3));
-}
+    // console.log(Math.pow(x,3));
+// }//kono number ke gun korte math.pow bebohar korah hoy.
 
