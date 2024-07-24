@@ -202,3 +202,29 @@
 // let fruit=fruits.toSpliced(0,1);
 // console.log(fruit);
 // console.log(fruits);
+
+
+//Array Slice();
+
+// const fruits=['Banana', 'Apple', 'Mango', "John", "Doe","Saab", "Volvo",
+// "BMW",'Cat','Cow','Crow'];
+
+// let notFruit=fruits.slice(3);
+
+// console.log(notFruit);
+// console.log(fruits);
+
+
+//Array Slice();
+// const fruits=['Banana', 'Apple', 'Mango', "John", "Doe","Saab", "Volvo",
+// "BMW",'Cat','Cow','Crow'];
+
+// const fruit=fruits.slice(0,3);
+// console.log(fruit);
+
+
+//Slice out the animal name
+// const animal = fruits.slice(-3);
+//const animal = fruits.slice(-3,11);//negative value diye kaj korte hole obboshoi kheyal rakhte hobe je index amon vabe likhte hobe jate count korar somoy jate left thake right hoy and second index er value first er pore dite hobe.jate kore left thake count suru hole jate protome first slice and pore jate second slice hoy tahole kaj korbe onnotai kaj korbe nh
+
+// console.log(animal);
