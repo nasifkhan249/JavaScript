@@ -228,3 +228,290 @@
 //const animal = fruits.slice(-3,11);//negative value diye kaj korte hole obboshoi kheyal rakhte hobe je index amon vabe likhte hobe jate count korar somoy jate left thake right hoy and second index er value first er pore dite hobe.jate kore left thake count suru hole jate protome first slice and pore jate second slice hoy tahole kaj korbe onnotai kaj korbe nh
 
 // console.log(animal);
+
+
+
+
+
+
+// indexOf()
+
+// When using indexOf() on an array, it searches for a specific value within the array. If the value is found, it returns the index of the first occurrence of that value in the array.
+
+// let x = ['Apple','Mango','Lemon','Kiwi','Lemon'];
+// let y = x.indexOf('Lemons');
+// console.log(y);
+
+// lastIndexOf();
+
+// ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+
+//Array.includes() allows to check for NaN values. Unlike Array.indexOf().
+
+// let y = x.includes("Mangos");
+// console.log(y);
+
+
+
+
+// let x = ['Apple','Mango','Lemon','Kiwi','Mango','Apple','Lichi','Orange','Banana','Apple'];
+
+// let y = x.lastIndexOf('Apple')+1;
+// console.log(y);
+
+
+// let x = ['Apple','Mango','Lemon','Kiwi','Mango','Apple','Lichi','Orange','Banana','Apple'];
+
+
+
+// const fruits = function (value){
+//         return value === 'Kiwi';
+// }
+
+// let y = x.find(fruits);
+// console.log(y);
+
+
+
+//findIndex()
+//The findIndex() method returns the index of the first array element that passes a test function.
+
+// let x = ['Apple','Mango','Lemon','Kiwi','Mango','Apple','Lichi','Orange','Banana','Apple'];
+
+//let y = x.findIndex(item => item === 'Apple');
+//console.log(y); // This will log the index of the first occurrence of 'Apple' in the array
+
+//find()
+//The find() method returns the value of the first array element that passes a test function.
+
+// const x = [1,2,3,4,5,6,7,8,9];
+// let y = x.find(numbers);
+
+
+// function numbers (value){
+//       return  value > 5
+// }
+// console.log(y);
+
+//findLast()
+
+//findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+
+// let x = [1,2,3,4,5,6,7,8,9];
+
+// let y =x.findLast(numbers);
+
+// function numbers (value){
+//         return value > 2;
+// }
+
+// console.log(y);
+
+
+//findLastIndex();
+
+//findLastIndex() method that will start from the end of an array and return the index number of that value which i want to know and return the index number of first element index number that satisfies a condition.
+
+
+// const x = [1,2,3,4,5,6,7,8,9,10];
+
+// // console.log(Math.max(...x));
+// let y = x.findLastIndex(numbers)+1;
+
+// function numbers (value){
+//         return value < 5;
+// }
+
+// console.log(typeof y);
+
+
+//sort()
+
+//The sort() method sorts an array alphabetically:
+
+// const fruit = [2,11,8,4,5,12,6,3,6,7,9,1];
+// console.log(fruit);
+
+// const fruit = ['Apple','Mango','Lemon','Kiwi','Mango','Apple','Lichi','Orange','Banana','Apple'];
+
+// const fruit = [9,2,5,6,8,4,7,1,3];
+
+// let fruits = fruit.sort();
+// console.log(fruits);
+// console.log(fruit);
+
+//reverse();
+//The reverse() method reverses the elements in an array:
+//The reverse() method reverses the elements in an array:
+// const fruit = ['Apple','Mango','Lemon','Kiwi','Mango','Apple','Lichi','Orange','Banana','Apple'];
+
+// let fruits = fruit.reverse();
+// console.log(fruits);
+// console.log(fruit);
+
+
+//sort() and reverse() combine
+//By combining sort() and reverse(), you can sort an array in descending order.
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let y= fruits.sort();
+// let z=y.reverse();
+
+// console.log(y);
+// console.log(z);
+
+
+// const x = ['9','2','5','11','6','12','8','13','22','4','7','1','21','3'];
+// const x = ['100','25'];
+// let y = x.sort();
+// console.log(y);
+
+
+//toSorted()
+//toSorted() method as a safe way to sort an array without altering the original array.
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let x = fruits.toSorted();
+// console.log(x);
+
+
+//toReversed()
+// toReversed() method as a safe way to reverse an array without altering the original array.
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let y = fruits.toReversed();
+// console.log(y);
+
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let x = fruits.toSorted();
+// let y = x.toReversed();
+// console.log(y);
+// console.log(fruits);
+
+
+// If the result is negative, a is sorted before b.
+
+// If the result is positive, b is sorted before a.
+
+// const points = [10,3,4,7,8,9,2,1,5,6];
+
+// let y = points.sort(function (a,b){
+//         return a-b;
+// });
+// console.log(y);
+
+
+
+//(b-a)
+
+// The sort function looks at two numbers at a time.
+// It uses the function(a, b){return b - a} part to decide which number should come first.
+// If b - a is positive (greater than 0), it means b is bigger, so b should come before a.
+// If b - a is negative (less than 0), it means a is bigger, so a should come before b.
+
+// const points = [10,3,4,7,8,9,2,1,5,6];
+
+// let y = points.sort(function(a,b){
+        // return b-a;
+// })
+// console.log(y);
+
+//Using a sort function, like explained above, you can sort an numeric array in random order
+// const points = [10,3,4,7,8,9,2,1,5,6];
+
+
+// let y = points.sort(function(){
+        // return 0.5 - Math.random();
+// });
+
+// console.log(y);
+
+
+// const points = [40, 100, 1, 5, 25, 10];
+
+// function myFunction() {
+//         for (let i = points.length -1; i > 0; i--) {
+//           let j = Math.floor(Math.random() * (i+1));
+//           let k = points[i];
+//           points[i] = points[j];
+//           points[j] = k;
+//         }
+// }
+
+
+
+
+
+// console.log(points.length);
+
+// let i = points.length-1;
+// console.log(i);
+
+// let j = Math.floor(Math.random()*(i+1));
+// console.log(j);
+
+// console.log(i);
+
+// const points = [40, 100, 1, 5, 25, 10];
+
+// for (let i = points.length -1; i > 0; i--) {
+//   let j = Math.floor(Math.random() * (i+1));
+//   let k = points[i];
+//   points[i] = points[j];
+//   points[j] = k;
+// }
+
+// const points = [40,100,1,5,25,10];
+
+
+//let i = points.length.-1;ai line ti dara bujai je i er value hobe points array er joto gulu value ase tar modde last er index number joto toto boshbe ortata jehetu javaScript count korah 0 thake suru hoy tay.ortat akti array te 10 element thakle tokhon 0 thake count suru korle dekha jabe je 0 thake 9 porjonto ai total 10 ti .ortat javaScript er moto jate count korah jai tay point.length-1 deya hoyeche.
+//i>0=ai line ti dara bujai je jotokhon nh i er value 0 thake chuto hoy toto khon loop gurte thakbe.
+//i--.ai line ti dara bujai je proti bar loop gorar por 1 kore value komano
+// function myFunction(){
+//         for(let i=0;i<points.length;i++){
+//                 let j = Math.floor(Math.random()*(i+1));//ai line ti dara bujai je math.random akti number dibe oi number er shate i+1 gun hobe.and math.floor use kora hoyeche jate kono dosomik songkha nh ashe .
+//                 let k = points[i];//ai line ti dara point[i] index a value ache oita ke k name varibale store kore rakhbe
+//                 points[i]=points[j];//ai line dara bujai je suffle korar jonno.oratat aikhane i er value er shate j er value shate stan bodol korar jonno.jate kore suffle kora jai
+//                 points[j]=k; //ai line ti dara bujai je j er value ke kl name variable e store kore rakha.
+//                 console.log(`k =========>`+k);
+                
+//         }
+// };
+// console.log(points);
+
+// myFunction();
+// console.log(points);
+
+// let x = myFunction();
+// console.log(x);
+
+
+//find the lowest number in the array;
+// const points = [40,100,1,5,25,10];
+
+// let y = points.sort(function (a,b){
+//         return a-b;
+// });
+// console.log(y[0]);
+
+
+// console.log(points[0]);
+
+//find the highest number in the array
+// const points = [40,100,1,5,25,10];
+
+// let y = points.sort(function(a,b){
+//         return b-a;
+// });
+// console.log(points[0]);
+
+// console.log(y[0]);
+
+//find lowest number in the array using Math.min.apply();
+
+const points = [40,100,1,5,25,10];
+
+function myFunction(arr){
+        return Math.min.apply(null , arr);
+}
+let y=myFunction(points)
+console.log(y);

@@ -146,8 +146,66 @@
 
 
 //indexOf method left side thake count suru korbe and protome je index e value tah kuje pabe oi index number tah output a print korbe.ar jodi second parameter dewa hoy thokon er maddome bujai je ato number index er por thake protome jai index number a value kuje pawa jabe toto number index tah print korbe.jemon tah holo nicher udahorone second parameter hisabe 10 dewa hoyeche tar mane 10 number index er age jodi value pawa jai tobe opitah dorah hobe nh .value dorah hobe 10 number index er por jai index e value tah kuje pawa jabe oi index number tah print korah hobe.ortat nicher udahorone 10 number index er por thake kujah suru korle locate word kuje pawa jabe 21 number index e.
-let text1 = "Please locate where 'locate' occurs! locate";
-let index = text1.indexOf("locate",10);
-console.log(index);
+// let text1 = "Please locate where 'locate' occurs! locate";
+// let index = text1.indexOf("locate",10);
+// console.log(index);
+
+// const x = ['Banana','Mango','Lemon'];
+
+// const y=x.shift();
+// console.log(y);
+// console.log(x);
+
+// const y= "Potato,Tomato,Kiwi";
+
+// const z = x.concat(y);
+// console.log(z);
 
 
+// const x = ['Banana','Mango','Lemon','Kiwi'];
+
+// const y = x.copyWithin(1,2,3);
+// console.log(y);
+
+
+//Array CopyWithin(target,start,end) method
+
+//target=5,
+//start=1,
+//end=2,
+
+//target=9,*target means that which position i keep my copying element 
+//start=1,*start means that which position i want start copy
+//end=4,*end means that which position i end my copying.
+
+//target=3
+//start=0
+//end=take defaults array.length
+
+//target= -5,
+//start= -6,
+//end=  -4
+
+        //    0         1        2        3       4    5
+// const fruits=['Banana','Apple','Mango',"John","Doe","Saab","Volvo",
+// "BMW",'Cat','Cow','Crow'];
+
+// const fruit=fruits.copyWithin(-5,-6,-4);
+// console.log(fruit);
+
+// console.log(fruits);
+
+// const fruits=['Banana','Mango','Apple']
+
+// const x = fruits.splice(2,0,'Lemon','Kiwi');
+// console.log(x);
+// console.log(fruits);
+
+
+const fruits=['Banana','Apple','Mango',"John","Doe","Saab","Volvo",
+"BMW",'Cat','Cow','Crow'];
+
+// const fruit = fruits.slice(3,5);
+const fruit = fruits.slice(1,3);
+console.log(fruit);
+console.log(fruits);
