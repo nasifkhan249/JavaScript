@@ -508,10 +508,111 @@
 
 //find lowest number in the array using Math.min.apply();
 
-const points = [40,100,1,5,25,10];
+// const points = [40,100,1,5,25,10];
 
-function myFunction(arr){
-        return Math.min.apply(null , arr);
+// function myFunction(arr){
+//         return Math.min.apply(null , arr);
+// }
+// let y=myFunction(points)
+// console.log(y);
+
+// const cars = [
+//         {type:"Volvo", year:2016},
+//         {type:"Saab", year:2001},
+//         {type:"BMW", year:2010}
+//     ];
+    
+//     function myFunction() {
+//         cars.sort(function(a, b){
+//             let x = a.type.toLowerCase();
+//             let y = b.type.toLowerCase();
+//             if (x < y) {return -1;}
+//             if (x > y) {return 1;}
+//             return 0;
+//         });
+//         displayCars();
+//     }
+    
+//     function displayCars() {
+//         console.log(cars[0].type + " " + cars[0].year);
+//         console.log(cars[1].type + " " + cars[1].year);
+//         console.log(cars[2].type + " " + cars[2].year);
+//     }
+    
+//     myFunction();
+    
+
+
+// What It Means
+// ES2019 Revised the Array sort() Method:
+// In 2019, a new rule (called ES2019) changed how the sort() method works in JavaScript.
+// Before 2019:
+// Before this change, browsers could use different ways to sort arrays. Some of these ways were called “unstable sorting algorithms” like QuickSort.
+// After ES2019:
+// After the change in 2019, browsers must use a “stable sorting algorithm” when sorting arrays.
+// What is a Stable Sorting Algorithm?
+// Stable Sorting:
+// When you sort items that have the same value, a stable sorting algorithm keeps their original order.
+// For example, if you have two items with the same price, they will stay in the same order they were in before sorting.
+// Example to Understand
+// Imagine you have a list of students with their names and grades:
+
+// JavaScript
+
+// const students = [
+//   {name: "Alice", grade: 90},
+//   {name: "Bob", grade: 90},
+//   {name: "Charlie", grade: 85}
+// ];
+// AI-generated code. Review and use carefully. More info on FAQ.
+// If you sort by grade, both Alice and Bob have the same grade (90).
+// With a stable sort, Alice will stay before Bob because she was first in the original list.
+// Why It Matters
+// Before 2019: The order of Alice and Bob might change because the sorting method wasn’t stable.
+// After 2019: The order of Alice and Bob will stay the same because the sorting method is stable.
+// Summary
+// Before 2019: Sorting could change the order of items with the same value.
+// After 2019: Sorting keeps the order of items with the same value.
+
+
+
+    const myArr = [
+        {name:"X00",price:100 },
+        {name:"X01",price:100 },
+        {name:"X02",price:100 },
+        {name:"X03",price:100 },
+        {name:"X04",price:110 },
+        {name:"X05",price:110 },
+        {name:"X06",price:110 },
+        {name:"X07",price:110 },
+        {name:"X08",price:120 },
+        {name:"X09",price:120 },
+        {name:"X10",price:120 },
+        {name:"X11",price:120 },
+        {name:"X12",price:130 },
+        {name:"X13",price:130 },
+        {name:"X14",price:130 },
+        {name:"X15",price:130 },
+        {name:"X16",price:140 },
+        {name:"X17",price:140 },
+        {name:"X18",price:140 },
+        {name:"X19",price:1 }
+      ];
+
+
+myArr.sort(function (a,b){
+        if(a.price < b.price){
+                return -1;
+        }else if(a.price > b.price){
+                return 1;
+        }else{
+                return 0
+        }
+});
+
+myArr.forEach(myFunction)
+
+function myFunction (value){
+        console.log( value.name + " " + value.price);
+        
 }
-let y=myFunction(points)
-console.log(y);
