@@ -125,4 +125,163 @@ function isVoter(age){
     }
 }
 
-isVoter(10)
+// isVoter(10)
+
+
+
+// Grade Calculator:
+// Write a function that takes a student’s score as input and prints their grade based on the following criteria:
+// 90 and above: A
+// 80 to 89: B
+// 70 to 79: C
+// 60 to 69: D
+// Below 60: F
+
+
+function gradeCal(num){
+    if(num<0 || num >=101){
+        console.log("Not Valid Number");
+        
+    }else if(num>=90 && num <=100){
+        console.log("Grade is A");
+        
+    }else if(num>=80 && num <=89){
+        console.log("Grade is B");
+        
+    }else if(num>=70 && num<=79){
+        console.log("Grade is C");
+        
+    }else if(num>=60 && num<=69){
+        console.log("Grade is D");
+        
+    }else{
+        console.log("Garde is F");
+        
+    }
+};
+
+// gradeCal(69)
+
+
+
+
+// Temperature Check:
+// Write a function that takes a temperature in Celsius as input and prints a message based on the temperature:
+// Above 30: “It’s hot outside!”
+// 20 to 30: “The weather is nice.”
+// 10 to 19: “It’s a bit chilly.”
+// Below 10: “It’s cold outside!”
+
+function temperature(temp){
+    if(temp>30){
+        console.log("It's hot outside");
+        
+    }else if(temp>=20 && temp <=30){
+        console.log("The weather is nice");
+        
+    }else if(temp>=10 && temp <=19){
+        console.log("It's a bit chilly");
+        
+    }else{
+        console.log("It's cold outside");
+        
+    }
+};
+// temperature(15);
+
+
+// Number Range:
+// Write a function that takes a number as input and prints a message based on the range the number falls into:
+// 1 to 10: “The number is between 1 and 10.”
+// 11 to 20: “The number is between 11 and 20.”
+// 21 to 30: “The number is between 21 and 30.”
+// Above 30: “The number is greater than 30.”
+
+
+function numberRange(num){
+    if(num<0 || num>100){
+        console.log(num+" "+"Not Valid Number");
+        
+    }
+    else if(num>=1 && num<=10){
+        console.log(num+" "+"The number is between 1 and 10");
+        
+    }else if(num>=11 && num<=20){
+        console.log(num+" "+"The number is between 11 and 20");
+        
+    }else if(num>=21 && num<=30){
+        console.log(num+" "+"The number is between 21 and 30");
+        
+    }else{
+        console.log(num+" "+"The number is greater than 30");
+        
+    }
+}
+
+// numberRange(101)
+
+
+
+// Day of the Week:
+// Write a function that takes a number (1 to 7) as input and prints the corresponding day of the week:
+// 1: “Monday”
+// 2: “Tuesday”
+// 3: “Wednesday”
+// 4: “Thursday”
+// 5: “Friday”
+// 6: “Saturday”
+// 7: “Sunday”
+// Any other number: “Invalid input”
+
+function week(num){
+    if(num===1){
+        console.log("Monday");
+        
+    }else if(num===2){
+        console.log("Tuesday");
+        
+    }else if(num===3){
+        console.log("wednesday");
+        
+    }else if(num===4){
+        console.log("Thursday");
+        
+    }else if(num===5){
+        console.log("Friday");
+        
+    }else if(num===6){
+        console.log("Saturday");
+        
+    }else if(num===7){
+        console.log("Sunday");
+        
+    }else{
+        console.log("Invalid input");
+        
+    }
+}
+
+// week(4)
+
+// Discount Calculator:
+// Write a function that takes the total amount of a purchase as input and prints the discount based on the following criteria:
+// Above $100: “You get a 20% discount.”
+// $50 to $100: “You get a 10% discount.”
+// Below $50: “No discount available.”
+
+
+
+function total(amount){
+    if(amount>100){
+        console.log("You get a 20% discount");
+        
+    }else if(amount>=50 && amount<=100){
+        console.log("You get a 10% discount");
+        
+    }else{
+        console.log("No discount available");
+        
+    }
+}
+
+// total(49)
