@@ -65,3 +65,15 @@ function getLetterGrade(grade) {
 let currentMonth = new Date().getMonth();
 let seasonResult = season(currentMonth);
 console.log(seasonResult); // Output will depend on the current month
+
+
+
+
+
+let arr = [[1, 2, 3, 4, 5]];
+for (let i = 0; i < arr.length; i++) { // Outer loop for rows
+    for (let j = 0; j < arr[i].length; j++) { // Inner loop for columns
+        console.log(arr[i][j]); // Print each element
+    }
+}
+

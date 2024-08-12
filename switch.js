@@ -239,5 +239,7 @@ function fruits(name){
 
 
 // Animal Sound: Create a program that takes the name of an animal and prints the sound it makes. For example, “dog” for “bark”, “cat” for “meow”.
+
+
 // Browser Detection: Write a program that takes the name of a web browser (“Chrome”, “Firefox”, “Safari”, “Edge”) and prints a message about its popularity or a fun fact.
 // Holiday Greeting: Create a program that takes the name of a holiday (“Christmas”, “Halloween”, “Eid”) and prints a corresponding greeting message.
