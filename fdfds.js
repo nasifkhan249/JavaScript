@@ -77,3 +77,46 @@ for (let i = 0; i < arr.length; i++) { // Outer loop for rows
     }
 }
 
+
+
+let arrs=[[100,2,10],[10,20,30]];
+
+for(let i =0;i<arr.length;i++){
+    let sum=0;
+    for(let j =0;j<arr[i].length;j++){
+        sum+=arr[i][j];
+    };
+    console.log(sum);
+    
+}
+
+
+
+function generatePascalsTriangle(numRows) {
+  // Initialize the triangle with the first row
+  let triangle = [[1]];
+
+  // Generate each row
+  for (let i = 1; i < numRows; i++) {
+      let prevRow = triangle[i - 1];
+      let newRow = [1]; // Start each row with 1
+
+      // Fill in the middle values
+      for (let j = 1; j < i; j++) {
+          newRow.push(prevRow[j - 1] + prevRow[j]);
+      }
+
+      // End each row with 1
+      newRow.push(1);
+      triangle.push(newRow);
+  }
+
+  // Print the triangle
+  for (let row of triangle) {
+      console.log(row.join(' '));
+  }
+}
+
+// Example usage:
+generatePascalsTriangle(5);
+

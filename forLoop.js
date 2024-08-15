@@ -132,13 +132,13 @@
 // }
 
 // 2D Array Printing: Given a 2D array, write a JavaScript code to print all the elements using nested for loops.
-let arr=[[1,2,3,4,5]]
-for(let i =0;i<arr.length;i++){
-    for(let j = 0;j<arr[i].length;j++){
-        console.log(arr[i][j]);
+// let arr=[[1,2,3,4,5]]
+// for(let i =0;i<arr.length;i++){
+//     for(let j = 0;j<arr[i].length;j++){
+//         console.log(arr[i][j]);
         
-    }
-}
+//     }
+// }
 
 // Pattern Printing: Write a JavaScript code to print the following pattern using nested for loops:
 // *
@@ -147,11 +147,135 @@ for(let i =0;i<arr.length;i++){
 // * * * *
 // * * * * *
 
+// for(let i=1;i<=5;i++){
+//     let str="";
+//     for(let j=1;j<=i;j++){
+//         str+="*"+" "
+//     }
+//     console.log(str);
+    
+// }
+
 // Sum of 2D Array Elements: Given a 2D array, write a JavaScript code to find the sum of all elements using nested for loops.
+// let arr=[[100,2,10],[10,20,30]];
+
+// for(let i =0;i<arr.length;i++){
+//     let sum=0;
+//     for(let j =0;j<arr[i].length;j++){
+//         sum+=arr[i][j];
+//     };
+//     console.log(sum);
+    
+// }
+
+
 // Transpose of a Matrix: Write a JavaScript code to find the transpose of a given 2D matrix using nested for loops.
+// To find the transpose of a given 2D matrix using nested for loops in JavaScript, you can follow these steps:
+
+// Create a function that takes a matrix as an argument.
+// Initialize an empty array to store the transposed matrix.
+// Use nested for loops to iterate through the matrix.
+// Swap the rows and columns and store the result in the new array.
+// Return the transposed matrix.
+
+function transPose(matrix){
+    let arr=[];
+    for(let i=0;i<matrix[0].length;i++){
+        let newRow=[];
+        for(let j=0;j<matrix.length;j++){
+            newRow.push(matrix[j][i]);
+        }
+        arr.push(newRow)
+    };
+    return arr;
+}
+
+let originalMatrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+
+
+// console.log(transPose(originalMatrix));
+
+
+
 // Chessboard Coordinates: Write a JavaScript code to generate and print the coordinates of a chessboard (8x8) using nested for loops.
+// To generate and print these coordinates, you can use nested for loops. Here’s a step-by-step explanation:
+
+// Create two arrays: One for the column labels (‘a’ to ‘h’) and one for the row numbers (‘1’ to ‘8’).
+// Use nested for loops: The outer loop will iterate over the columns, and the inner loop will iterate over the rows.
+// Print the coordinates: Combine the column label and row number to form the coordinate and print it.
+
+function chessBoard(a,b){
+    let sum="";
+    for(let i=0;i<a.length;i++){
+        for(let j=0;j<b.length;j++){
+            sum+= a[i]+b[j]+" ";
+        }
+        
+    }
+    return sum;
+}
+
+let columns = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+    // Array of row numbers
+let rows = ['1', '2', '3', '4', '5', '6', '7', '8'];
+
+// let x=chessBoard(columns,rows);
+// console.log(x);
+
+
+
+
+
+
+
 // Diagonal Elements of a Matrix: Given a square matrix, write a JavaScript code to print the diagonal elements using nested for loops.
-// Pascal’s Triangle: Write a JavaScript code to generate and print Pascal’s Triangle up to a given number of rows using nested for loops.
-// Matrix Multiplication: Write a JavaScript code to multiply two matrices using nested for loops.
-// Magic Square: Write a JavaScript code to check if a given 2D array is a magic square using nested for loops. A magic square is a grid where the sum of every row, column, and diagonal is the same.
+
+function printDiagonals(matrix) {
+
+    let n=matrix.length
+    
+    for(let i=0;i<n;i++){
+        for(let j=0;j<n;j++){
+            if(i===j){
+                console.log(matrix[i][j]);
+                
+            }
+        }
+    }
+
+    for(let i=0;i<n;i++){
+        for(let j=0;j<n;j++){
+            if(i+j===n-1){
+                console.log(matrix[i][j]);
+            }
+        }
+    }
+}
+
+
+
+
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+// printDiagonals(matrix);
+
+
+let age =Number(prompt(`Enter you'r age`));
+
+while(age < 18){
+    age=Number(prompt("You'r age is not suitable for enter this site"));
+};
+
+if(age>18){
+   alert('Welcome to this site');
+}
+
 
