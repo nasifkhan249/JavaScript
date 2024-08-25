@@ -214,8 +214,7 @@ function average(){
 
 
 // 9.Remove Duplicates: Remove duplicate elements from an array using forEach.
-function removeDuplicates(){
-   const num=[1,2,3,4,5,6,7,8,9,10,4,6,3,6,8,9,3,5,9];
+function removeDuplicates(num){
    const newArr=[];
 
    num.forEach(function(element){
@@ -223,11 +222,22 @@ function removeDuplicates(){
          newArr.push(element);
       }
    });
-   console.log(newArr);
+   return newArr;
    
 }
 
-// removeDuplicates()
+function duplicate(num){
+   let newArr=[];
+   let newSet=new Set(num);
+
+   newSet.forEach(function(element){
+      newArr.push(element);
+   });
+   return newArr
+}
+// const num=[1,2,3,4,5,6,7,8,9,10,4,6,3,6,8,9,3,5,9];
+// console.log(removeDuplicates(num));
+
 
 // 10.Create Object from Array: Convert an array of key-value pairs into an object using forEach.
 
@@ -252,16 +262,68 @@ function convert(){
    
 }
 
-convert()
+// convert()
 
 
 
 // 11.Find Index of Element: Find the index of a specific element in an array using forEach.
+   function idex(){
+      let result=[];
+      const fruits = [["Banana", "Orange", "Apple", "Mango"],["Banana", "Orange", "Apple", "Mango"]];
+
+      fruits.forEach(function (element,index,array){
+         array[index]=element.forEach(function(el,index){
+            let x = el.split("").join('') + "" + index;
+            result.push(x);
+         })
+      });
+      console.log(result);
+      
+   }
+   // idex();
+
+
 // 12.Check for Prime Numbers: Check if each number in an array is a prime number using forEach.
-// 13.Group by Property: Group an array of objects by a specific property using forEach.
-// 14.Flatten Nested Arrays: Flatten a nested array (one level deep) using forEach.
-// 15.Calculate Factorials: Calculate the factorial of each number in an array using forEach.
-// 16.Find Longest String: Find the longest string in an array using forEach.
-// 17.Sum of Digits: Calculate the sum of digits for each number in an array using forEach.
+//   function isPrime(num){
+//    if(num <=1){
+//       return false;
+//    }
+//    for(let i =2; i<=Math.sqrt(num); i++){
+//       if(num%i===0){
+//          return false;
+//       }
+//    }
+//    return true;
+//   }
+
+//   let numbers=[2,3,4,5,6,7,8,9,10,11];
+
+//   numbers.forEach(function (num){
+      
+//       if(isPrime(num)){
+//          console.log(`This is prime number ${num}`);
+//       }else{
+//          console.log(`This is not prime number ${num}`)
+//       }
+      
+//   });
+
+  
 // 18.Capitalize First Letter: Capitalize the first letter of each string in an array using forEach.
-// 19.Create HTML List: Generate an HTML list (<ul>) from an array of strings using forEach.
+
+
+function capitalize(){
+   let arr=["banana", "orange", "apple", "mango"];
+   let newArr=[];
+   arr.forEach(function(element,index,array){
+      let x=array[index]=element.charAt(0).toUpperCase();
+      let y=array[index]=element.slice(1);
+
+      let z=x + y;
+      newArr.push(z);    
+   });
+
+   return newArr;
+}
+
+console.log(capitalize());

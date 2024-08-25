@@ -120,3 +120,6 @@ function generatePascalsTriangle(numRows) {
 // Example usage:
 generatePascalsTriangle(5);
 
+
+
+
