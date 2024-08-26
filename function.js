@@ -286,4 +286,307 @@
 // let greeting1=buildGreeting("hi");
 // console.log(greeting1("hello"));
 
-   
+
+
+// Key Purposes of Closures
+
+
+// Data Privacy:
+// Closures allow you to create private variables that cannot be accessed from outside the function. This is useful for encapsulating data and protecting it from being modified directly.
+
+
+// function createCounter() {
+//     let count = 0;
+//     return function() {
+//         count++;
+//         return count;
+//     };
+// }
+// let counter = createCounter();
+// console.log(counter()); // Prints 1
+// console.log(counter()); // Prints 2
+
+
+
+// Maintaining State:
+// Closures help maintain state between function calls. This is particularly useful in scenarios like event handling, where you need to keep track of previous states.
+
+
+// function createCounter() {
+//     let count = 0;
+//     return function() {
+//         count++;
+//         return count;
+//     };
+// }
+// let counter = createCounter();
+// console.log(counter()); // Prints 1
+// console.log(counter()); // Prints 2
+
+
+
+
+// Callbacks and Asynchronous Programming:
+// Closures are essential for handling callbacks and asynchronous operations. They allow the callback function to access variables from the outer function even after the outer function has completed.
+
+
+// function fetchData(url) {
+//     fetch(url).then(function(response) {
+//         return response.json();
+//     }).then(function(data) {
+//         console.log(data);
+//     });
+// }
+// fetchData('https://api.example.com/data');
+
+
+
+// Function Factories:
+// Closures can be used to create functions that generate other functions with specific behaviors. This is useful for creating reusable and configurable functions.
+
+
+// function createMultiplier(multiplier) {
+//     return function(number) {
+//         return number * multiplier;
+//     };
+// }
+// let double = createMultiplier(2);
+// let triple = createMultiplier(3);
+// console.log(double(5)); // Prints 10
+// console.log(triple(5)); // Prints 15
+
+
+
+// Currying:
+// Currying is a technique where a function returns another function with some of its arguments pre-filled. Closures make currying possible by retaining access to the outer function’s arguments.
+
+
+// function add(a) {
+//     return function(b) {
+//         return a + b;
+//     };
+// }
+// let addFive = add(5);
+// console.log(addFive(3)); // Prints 8
+
+
+
+
+
+
+//Self-Invoking Functions
+
+
+// Private Scope of Self-Invoking Functions
+
+// Whatever code is defined inside the self-executing function remains in the private scope and doesn't pollute the global scope. So, developers can make code clear and remove the errors like naming conflicts, etc. Also, the code of the self-invoking function remains hidden and can't be accessible by other parts of the code.
+// Example
+
+// In the example below, we have defined the variable 'a' outside or inside the function. The variable defined outside is a global variable, and the variable defined inside the function is a private variable, limited to the self-executing function's scope.
+
+// Also, we have printed the value of the variable from inside and outside of the function. Users can observe the variable's value in the output.
+
+// In this way, we can avoid the naming conflicts.
+// Open Compiler
+
+// <html>
+// <body>
+//    <div id = "output"> </div>
+//    <script>
+//       const output = document.getElementById("output");
+//       let a = 10;
+//          (function () {
+//             output.innerHTML += "Entering to the function <br/>";
+//             var a = 20;
+//             output.innerHTML += "The value of a is " + a + "<br>";
+//             output.innerHTML += "Exiting to the function <br/>";
+//          }());
+//          output.innerHTML += "The value of the outside the function is " + a;
+//     </script>
+// </body>
+// </html>
+
+// Output
+
+// Entering to the function
+// The value of a is 20
+// Exiting to the function
+// The value of the outside the function is 10
+
+
+
+
+
+// Example
+
+// In some cases, it is required to access the variable of the self-executing function outside of the function. In this case, we can make that variable global using the 'window' object as shown below and access the variable in the global scope.
+// Open Compiler
+
+// <html>
+// <body>
+//    <div id = "output"> </div>
+//    <script>
+//       (function () {
+//          var string = "JavaScript";
+//          window.string = string;
+//       })();
+//       document.getElementById("output").innerHTML =
+// 	  "The value of the string variable is: " + string;
+//    </script>
+// </body>
+// </html>
+
+
+
+//Arrow Function
+
+
+// Arrow Function with Single Statement
+
+// When the arrow function contains a single statement, we don't need to write the 'return' keyword and braces (curly brackets).
+// const add = (x, y) => x +y;
+
+// let a=add(1,2);
+// console.log(a);//output:3
+
+
+
+// Arrow Function with Multiple Statements
+
+// When the function body contains multiple statements, we should always use the 'return' statement to return a value. Also we should use the curly brackets.
+// Example
+
+// In the example below, the arrow function contains multiple statements, so we need to use the braces or return statement.
+
+
+
+// const divide = (x, y) => {
+//     let res = x / y;
+//     return res;
+// };
+
+//Note when we use block body using braces, we must use return statement.
+
+
+
+
+// Arrow Functions Without Parameters
+
+// The parameters p1, p2, …, pN, in the above syntaxes are options. We can write an arrow function without any parameters.
+
+// const greet = () => "Hello World!";
+
+// We can also write using block body using braces and return keyword −
+
+// const greet = () => {return "Hello World!";};
+
+// console.log(greet());
+
+
+
+
+// Arrow Function with Parameters
+// Example: Arrow function with a single parameter
+
+// The below code demonstrates that when you need to pass a single parameter to the function, you don't need to write parameters in the pair of parenthesis.
+// Open Compiler
+
+
+// const divide = x => 20 / x;
+// let res = divide(2);
+// console.log(res);
+
+
+
+
+
+
+// Arrow Function as an Expression
+
+// The arrow function can easily be used as an expression due to its shorter syntax.
+// Example
+
+// In the below code, we use the ternary operator, and based on the boolean value of the 'isMul' variable, we assign the arrow function expression to the 'func' variable.
+
+// After that, we use the 'func' variable to call the arrow function stored in that.
+
+// let isMul = false;
+// const func = isMul ? () => {
+//     let res = 5 * 5;
+//         return res
+//       } : () => {
+//     let res = 5 + 5;
+//         return res
+// };
+// console.log(func());
+
+
+
+// Benefits of Using Arrow Functions
+
+//1. Here, we have explained the benefits of using the arrow functions.
+
+//2 .    Shorter syntax − The arrow function decreases the code size to define the function.
+
+// 3.    Implicit return − To return the resultant value of the expression from the arrow function containing only a single statement, developers don't need to use the return keyword.
+
+//4.     Ease to use as expression − The arrow function can be easily used as an expression.
+
+
+
+
+// Limitations of Using Arrow Function
+
+// There are some limitations of arrow functions, which we have explained below.
+
+// 1.    No Arguments − The arrow function can't have an arguments object.
+
+//  2.   No prototype − The arrow function can't have a prototype property as it is stored in the variable as an expression.
+
+//  3.   No new keyword − The arrow function can't be used with the new keyword to create its object.
+
+
+
+
+
+
+
+//Function Invocation
+
+
+
+// Object Method Invocation
+
+// We haven't covered JavaScript objects yet in this tutorial but we will cover it in upcoming chapters. Here, let's learn the object method invocation in short.
+
+// The JavaScript object can also contain the function, and it is called the method.
+
+
+// Following is the syntax below to invoke the JavaScript object method.
+
+// obj.func();
+
+// In the above syntax, the 'obj' is an object containing the method, and 'func' is a method name to execute.
+// Example
+
+// In the example below, we have defined the 'obj' object containing the 'name' property and the 'getAge()' method.
+
+// Outside the object, we access the method by the object reference and invoke the method. In the output, the method prints 10.
+
+
+// const obj = {
+//     name: "John",
+//     getAge: () => {
+//       return 10;
+//     }
+// }
+// console.log(obj.getAge());
+
+
+
+
+ 
+
+
+
+
