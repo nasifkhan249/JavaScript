@@ -202,10 +202,45 @@
 // console.log(fruits);
 
 
-const fruits=['Banana','Apple','Mango',"John","Doe","Saab","Volvo",
-"BMW",'Cat','Cow','Crow'];
+// const fruits=['Banana','Apple','Mango',"John","Doe","Saab","Volvo",
+// "BMW",'Cat','Cow','Crow'];
 
 // const fruit = fruits.slice(3,5);
-const fruit = fruits.slice(1,3);
-console.log(fruit);
-console.log(fruits);
+// const fruit = fruits.slice(1,3);
+// console.log(fruit);
+// console.log(fruits);
+
+
+
+// let x = 1;
+// let y = +"20";
+// console.log(x+y);
+
+
+
+// function sayHello() {
+//    return"Hello!";
+//   }
+  
+//   let greeting = sayHello(); // This will print "Hello!" but greeting will be undefined
+//   console.log(greeting); // This will print undefined
+
+
+
+
+
+const marge=()=>{
+    function count(){
+        let final=""
+        for(let p =0; p<arguments.length;p++){
+            final+=arguments[p] + " "
+        }
+        return final;
+    }
+    return count;
+}
+
+let a=marge();
+let b=a("Hi", "I", "am", "John!");
+console.log(b);
+
